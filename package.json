@@ -1,13 +1,11 @@
 {
-  "name": "postgresql",
+  "name": "auth",
   "version": "1.0.0",
-  "description": "PostgreSQL backend with authentication and authorization",
-  "main": "dist/server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "db:init": "npm run build && node dist/database/initDb.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node api.js && tsx watch src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +20,12 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.10.1",
-    "pg": "^8.20.0"
+    "node-fetch": "^3.3.2",
+    "pg": "^8.20.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
@@ -32,6 +33,8 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.5.2",
     "@types/pg": "^8.20.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   }
